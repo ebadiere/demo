@@ -1,0 +1,10 @@
+.idea
+.tern-port
+.DS_Store
+CMakeLists.txt
+sendgrid.env
+cmake-build-debug/
+node_modules/
+*.log
+/build
+.truffle-solidity-loadersendgrid.env

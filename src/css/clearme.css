@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html,
+body {
+  background-color: #333;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; 
+  color: #FFF;
+}
+
+a, a:focus, a:hover {
+  color: #0078FF;
+}
+
+p {
+	font-weight: 300;
+	color: #FFF;
+}
+.appScreen {
+	background:#666;
+	min-height:100vh;
+}
+.codeScreen {
+	background:#333;
+	padding: 50px;
+	min-height:100vh;
+	
+}
+.logoRow {
+	align-content: center;
+}
+.logo {
+	width:100%;
+	height:auto;
+	margin: 25px 0px 50px;
+}
+.app-card {
+	margin: 20px;
+	background: url('../img/dag-background.png') no-repeat;
+	background-color:#001023;
+	background-position: bottom;
+	background-size:100%;
+	border: none;
+	border-radius:10px;
+	min-height: 70vh;
+	
+}
+.input {
+	background: transparent;
+	border: none;
+	border-radius: 0px;
+	border-bottom: 1px solid rgba(255,255,255,.2);
+	color: #FFF;
+	margin-bottom: 25px;
+}
+.form-control:focus {
+    background-color: transparent;
+    border-color: none;
+	border-bottom: 1px solid #0078FF;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+	color: #FFF;
+	font-weight:400;
+}
