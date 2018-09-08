@@ -54,8 +54,8 @@ class App extends Component {
             data: payload
         }, 'clearmeSecret', { expiresIn: 60 * 60 });   
  
-        // const endpoint = 'http://localhost:8081/validate';
-        const endpoint = 'http://clear-me-email-validator-dev.us-west-2.elasticbeanstalk.com/validate';
+        const endpoint = 'http://localhost:8081/validate';
+        // const endpoint = 'http://clear-me-email-validator-dev.us-west-2.elasticbeanstalk.com/validate';
         let encodedJWT = {};
         encodedJWT.jwt = `${token}`;
         const jsonBody = JSON.stringify(encodedJWT);
@@ -67,7 +67,7 @@ class App extends Component {
             }
           };
 
-        const response = await axios.post(endpoint, jsonBody, axiosConfig);
+        // const response = await axios.post(endpoint, jsonBody, axiosConfig);
         
         this.setState({
             token: token

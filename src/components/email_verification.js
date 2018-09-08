@@ -70,8 +70,10 @@ class EmailVerification extends Component{
         const token = JWT.sign({
             data: identityClaim
         }, 'clearmeSecret', {expiresIn: 60 * 60});
-        const ipfsAgent = new IPFSAgent('ipfs.infura.io', '5001', 'https');
+        // identityClaim.token = token;
+        const ipfsAgent = new IPFSAgent('127.0.0.1', '5001', 'http');
         const identityClaimHash = await ipfsAgent.saveEncodedData(token);
+        console.log('DEBUG: saved');
         return identityClaimHash;
     }
 
@@ -112,7 +114,7 @@ class EmailVerification extends Component{
     onResolve = async(event) => {
         event.preventDefault();
         const did = `did:clear:${this.state.ipfsHashFromReg}`;
-        let resolver = new Resolver('ipfs.infura.io', '5001', 'https');
+        let resolver = new Resolver('127.0.0.1', '5001', 'http');
         const ddoDoc = await resolver.resolve(did);
         const ddoDocRetrieved = JWT.verify(ddoDoc, 'clearmeSecret');
         this.setState({
